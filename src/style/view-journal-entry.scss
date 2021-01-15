@@ -1,0 +1,14 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry-wrapper {
+    font-size: 18px;
+    height: 300px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
