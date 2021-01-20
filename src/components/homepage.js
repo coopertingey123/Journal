@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import JournalWritingImage from "../../static/assets/images/prayer-journal-facebook.jpg"
+// import {Link} from "react-router-dom"
+// import JournalWritingImage from "../../static/assets/images/prayer-journal-facebook.jpg"
 
 import Navbar from "./navbar"
 

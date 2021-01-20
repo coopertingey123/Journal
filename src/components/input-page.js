@@ -81,7 +81,7 @@ export default class AddEntry extends Component {
     render() {
         
         return (
-            <div className="body-wrapper">
+            <div className="page-wrapper">
                 <div className="form-wrapper">
                     <Navbar/>
                     <form onSubmit={this.handleSubmit}>
