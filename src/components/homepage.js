@@ -1,19 +1,20 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import JournalWritingImage from "../../static/assets/images/prayer-journal-facebook.jpg"
 
 import Navbar from "./navbar"
 
 export default function homepage(props) {
     return (
-        <div className='homepage-wrapper'>
+        <div className="page-wrapper">
             <Navbar/>
-            <h1>Homepage</h1>
-            <Link className="nav-link" to="/add-entry">
-                Add Entry
-            </Link>
-            <Link className="nav-link" to="/view-entries">
-                View Entries
-            </Link>
+            <div className='homepage-wrapper'>
+                
+                <div className="text-wrapper">
+                    Memories are not to be forgotten
+                </div>
+            </div>
         </div>
+        
     )
 }

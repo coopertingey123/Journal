@@ -14,49 +14,54 @@ export default class LoggedIn extends Component {
         }      
     }
     
-    // componentDidMount() {
-    //     this.setState({
-    //         owner: Cookies.get("email")
-    //     })
-    // }
+    componentDidMount() {
+        this.setState({
+            owner: Cookies.get("email")
+        })
+    }
 
 
-    // handleLogout() {
-    //     Cookies.remove("email")
-    // }
+    handleLogout() {
+        Cookies.remove("email")
+    }
 
     render() {
         
         return (
             <div className='navbar-wrapper'>
-                <div className="nav-side">
+                
+                <div className="signed-in-wrapper">
                     Signed in as: <br/> {this.state.owner}
                 </div>
-                <div className="nav-link-wrapper">
-                    <Link className="nav-link" to="/">
-                        Home
-                    </Link>  
+                <div className="links-wrapper">                
+                    <div className="nav-link-wrapper">
+                        <Link className="nav-link" to="/">
+                            Home
+                        </Link>  
+                    </div>
+                    <div className="nav-link-wrapper">
+                        <Link className="nav-link" to="/add-entry">
+                            Add Entry
+                        </Link>
+                    </div>
+                    <div className="nav-link-wrapper">
+                        <Link className="nav-link" to="/view-entries">
+                            View Entries
+                        </Link>
+                    </div>
+                    <div className="nav-link-wrapper">
+                        <Link className="nav-link" to="/create-account">
+                            Create an Account
+                        </Link>  
+                    </div>
                 </div>
-                <div className="nav-link-wrapper">
-                    <Link className="nav-link" to="/add-entry">
-                        Add Entry
-                    </Link>
-                </div>
-                <div className="nav-link-wrapper">
-                    <Link className="nav-link" to="/view-entries">
-                        View Entries
-                    </Link>
-                </div>
-                <div className="nav-link-wrapper">
-                    <Link className="nav-link" to exact="/create-account">
-                        Create an Account
-                    </Link>  
-                </div>
-                <div className="nav-side">
+                {/* <div className="logout-button">
                     <Link className="nav-Link" to="/">
                         <button> Log Out </button>
                     </Link>
-                </div>
+                </div> */}
+                
+                
             </div>
         )
         }

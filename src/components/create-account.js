@@ -30,7 +30,7 @@ export default class CreateAccount extends Component {
         event.preventDefault()
 
         if (this.state.password === this.state.confirmPassword) {
-            fetch("https://journal-time-api-octclass.herokuapp.com/user/add", {
+            fetch("https://journal-backend-cjt.herokuapp.com/user/add", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({
@@ -44,6 +44,7 @@ export default class CreateAccount extends Component {
             .then(data => {
                 if (data == "User added successfully") {
                     // this.props.history.push("/login")
+                    {console.log(data)}
                 }
                 // else if (data === "Owner already exists") {
                 //     this.setState({ emailError: true })

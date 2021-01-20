@@ -9,6 +9,7 @@ import Home from "./homepage"
 import AddEntry from "./input-page"
 import ViewEntry from "./view-journal-entry"
 import CreateAccount from "./create-account"
+import Login from "./login"
 
 
 export default class App extends Component {
@@ -25,6 +26,7 @@ export default class App extends Component {
               <Route path="/add-entry" component={AddEntry} />
               <Route path="/view-entries" component={ViewEntry} />
               <Route path="/create-account" component={CreateAccount}/>
+              <Route path="/login" component={Login}/>
             </Switch>
           </div>
         </BrowserRouter>
