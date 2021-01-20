@@ -6,18 +6,33 @@ export default class ViewPage extends Component{
     constructor() {
         super()
         this.state = {
-            data: []        }
+            data: []        
+        }
+
+        this.handleDelete = this.handleDelete.bind(this)
 
     }
 
     componentDidMount(){
-        fetch("https://journal-time-api-octclass.herokuapp.com/journal/get", {
+        fetch("https://journal-backend-cjt.herokuapp.com/journal/get", {
             method: "GET"
         })
         .then(response => response.json(""))
         .then(data => this.setState({ data: data }))
         .catch(error => console.log(error))
         
+    }
+
+    handleDelete(id){
+        const shouldDelete = confirm(`Do you really want to delete journal?`);
+        fetch(`https://journal-backend-cjt.herokuapp.com/journal/delete/${id}`, {
+            method: "DELETE"
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => console.log(error))
     }
     
 
@@ -46,6 +61,7 @@ export default class ViewPage extends Component{
                         <div className="people">
                             People: {entry[1]}
                         </div>
+                        <button onClick={() => this.handleDelete(entry[0])}>Delete</button>
                     </div>
                     )}
                 

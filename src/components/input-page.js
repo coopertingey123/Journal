@@ -50,11 +50,11 @@ export default class AddEntry extends Component {
     handleSubmit(event) {
         event.preventDefault()
 
-        fetch("https://journal-time-api-octclass.herokuapp.com/journal/add", {
+        fetch("https://journal-backend-cjt.herokuapp.com/journal/add", {
             method: "POST",
             headers: { "content-type":"application/json"},
             body: JSON.stringify({
-                person: this.state.person,
+                people: this.state.person,
                 title: this.state.title,
                 description: this.state.description,
                 date: this.state.date,
@@ -95,7 +95,7 @@ export default class AddEntry extends Component {
                                 onChange={this.handleChange}
                                 placeholder="Title of entry"
                             />
-                            {console.log(this.state.title)}
+                            
                         </div>
 
                         <div className="input-wrapper">
@@ -107,7 +107,7 @@ export default class AddEntry extends Component {
                                 onChange={this.handleChange}
                                 placeholder="Location"
                             />
-                            {console.log(this.state.location)}
+                            
                         </div>
 
                         <div className="input-wrapper">
@@ -119,7 +119,7 @@ export default class AddEntry extends Component {
                                 onChange={this.handleChange}
                                 placeholder="Date"
                             />
-                            {console.log(this.state.date)}
+                            
                         </div>
 
                         <div className="input-wrapper">
@@ -131,15 +131,14 @@ export default class AddEntry extends Component {
                                 onChange={this.handleChange}
                                 placeholder="People to remember"
                             />
-                            <button 
-                                onclick={this.addPerson}
+                            {/* <button 
+                                onClick={this.addPerson}
                                 type="button"
                                 // disabled={this.state.person}
                             >
                             add 
                             </button><br/>
-                            People added: {this.state.people}
-                            {console.log(this.state.person)}
+                            People added: {this.state.people} */}
                             
                         </div>
                                                 
@@ -151,7 +150,6 @@ export default class AddEntry extends Component {
                                 onChange={this.handleChange}
                                 placeholder="Description or story"
                             />
-                            {console.log(this.state.description)}
                         </div>                      
                         
                         
