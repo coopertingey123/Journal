@@ -9,10 +9,16 @@ export default function homepage(props) {
         <div className="page-wrapper">
             <Navbar/>
             <div className='homepage-wrapper'>
-                
                 <div className="text-wrapper">
-                    Memories are not to be forgotten
+                    <div className="quote-wrapper">
+                        Memories are not to be forgotten
+                    </div>
+                    
+                    <div className="signup-wrapper">
+                        Get started today
+                    </div>
                 </div>
+                
             </div>
         </div>
         
