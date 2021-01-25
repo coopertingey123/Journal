@@ -24,11 +24,11 @@ export default class AddEntry extends Component {
         this.addPerson = this.addPerson.bind(this)
     }
 
-    // componentDidMount() {
-    //     this.setState({
-    //         user: Cookies.get("email")
-    //     })
-    // }
+    componentDidMount() {
+        this.setState({
+            user: Cookies.get("email")
+        })
+    }
 
     handleChange(event) {
         this.setState({
@@ -159,8 +159,7 @@ export default class AddEntry extends Component {
                             </button>
                         </div>
                         
-                    </form>                    
-                    {/* <Footer/>                    */}
+                    </form>                                      
                 </div>
                 
             </div>

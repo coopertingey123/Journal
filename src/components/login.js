@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Cookies from "js-cookie"
+import Navbar from "./navbar"
 
 
 export default class Login extends Component {
@@ -53,7 +54,8 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="body">
+            <div className="page-wrapper">
+                <Navbar/>
                 <div className='login-wrapper'>
                     <h1>Journal App</h1>
                     <h2>Login to see your journal entries</h2>
