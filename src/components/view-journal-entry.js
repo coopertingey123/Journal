@@ -49,18 +49,16 @@ export default class ViewPage extends Component{
                             {console.log(this.state.data)}
                             Title: {entry[2]}
                         </div>
-                        <div className="date">
-                            Date: {entry[4]}
+                        <div className="date-and-location">
+                            {entry[4]} at {entry[5]}
                         </div>
-                        <div className="location">
-                            Location: {entry[5]}
+                        <div className="people">
+                            With {entry[1]}
                         </div>
                         <div className="description">
                             Description: {entry[3]}
                         </div>
-                        <div className="people">
-                            People: {entry[1]}
-                        </div>
+                        
                         <button onClick={() => this.handleDelete(entry[0])}>Delete</button>
                     </div>
                     )}
