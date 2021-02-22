@@ -50,7 +50,7 @@ export default class AddEntry extends Component {
     handleSubmit(event) {
         event.preventDefault()
 
-        fetch("https://journal-backend-cjt.herokuapp.com/journal/add", {
+        fetch(`https://journal-backend-cjt.herokuapp.com/journal/add`, {
             method: "POST",
             headers: { "content-type":"application/json"},
             body: JSON.stringify({
