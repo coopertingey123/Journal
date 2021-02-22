@@ -26,7 +26,7 @@ export default class Login extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        Cookies.set("email", this.state.email)
+        // Cookies.set("email", this.state.email)
         fetch("https://journal-backend-cjt.herokuapp.com/user/authentication", {
             method: "POST",
             headers: { "content-type": "application/json" },

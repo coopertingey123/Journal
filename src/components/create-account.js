@@ -43,12 +43,12 @@ export default class CreateAccount extends Component {
             .then(response => response.json())
             .then(data => {
                 if (data == "User added successfully") {
-                    // this.props.history.push("/login")
+                    this.props.history.push("/login")
                     {console.log(data)}
                 }
-                // else if (data === "Owner already exists") {
-                //     this.setState({ emailError: true })
-                // }
+                else if (data === "Owner already exists") {
+                    this.setState({ emailError: true })
+                }
                 
                 else {
                     this.setState({ error: true })

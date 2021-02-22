@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-
+import Cookies from "js-cookie"
 import Navbar from "./navbar"
 
 export default class ViewPage extends Component{
     constructor() {
         super()
         this.state = {
-            data: []        
+            data: [],
+            email: ""        
         }
 
         this.handleDelete = this.handleDelete.bind(this)
@@ -14,7 +15,10 @@ export default class ViewPage extends Component{
     }
 
     componentDidMount(){
-        fetch("https://journal-backend-cjt.herokuapp.com/journal/get", {
+        this.setState({
+            email: Cookies.get("email", this.state.email)
+        })
+        fetch(`https://journal-backend-cjt.herokuapp.com/journal/get/${this.state.email}`, {
             method: "GET"
         })
         .then(response => response.json(""))

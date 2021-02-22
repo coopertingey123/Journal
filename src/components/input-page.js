@@ -15,7 +15,7 @@ export default class AddEntry extends Component {
             person: "",
             people: [],
             date: "",
-            user: "",
+            email: "",
             error: false
         }
         
@@ -26,7 +26,7 @@ export default class AddEntry extends Component {
 
     componentDidMount() {
         this.setState({
-            user: Cookies.get("email")
+            email: Cookies.get("email")
         })
     }
 
@@ -58,14 +58,15 @@ export default class AddEntry extends Component {
                 title: this.state.title,
                 description: this.state.description,
                 date: this.state.date,
-                location: this.state.location
+                location: this.state.location,
+                email: this.state.email
                 
             })
         })
         .then(response => response.json())
         .then(data => {
             if (data == "Data added successfully") {
-                // this.props.history.push("/")
+                this.props.history.push("/view-entries")
             }                           
             else {
                 this.setState({ error: true })
